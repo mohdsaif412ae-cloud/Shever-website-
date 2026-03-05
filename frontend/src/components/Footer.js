@@ -37,12 +37,12 @@ export const Footer = () => {
           {/* Company Info */}
           <div>
             {logo ? (
-              <img src={logo} alt="Shever Technical" className="h-12 w-auto mb-4 brightness-0 invert" />
+              <img src={logo} alt="Shever Technical" className="h-12 w-auto mb-4" style={{ filter: 'brightness(0) invert(1)' }} />
             ) : (
               <h3 className="text-2xl font-bold mb-4">Shever Technical</h3>
             )}
             <p className="text-gray-300 mb-4">
-              Professional technical and maintenance services in Dubai. Your trusted partner for HVAC, Electrical, Plumbing, and more.
+              Professional technical and maintenance services in UAE. Your trusted partner for HVAC, Electrical, Plumbing, and more.
             </p>
             <p className="text-sm text-gray-400">TRN: {contactInfo.trn}</p>
           </div>

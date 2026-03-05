@@ -59,11 +59,18 @@ export const Navigation = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3" data-testid="logo-link">
             {logo ? (
-              <img src={logo} alt="Shever Technical" className="h-12 w-auto" />
+              <div className="bg-white px-3 py-1 rounded-lg shadow-sm">
+                <img 
+                  src={logo} 
+                  alt="Shever Technical" 
+                  className="h-12 w-auto"
+                  style={{ maxWidth: '180px' }}
+                />
+              </div>
             ) : (
               <div className="flex items-center space-x-2">
                 <div className="w-10 h-10 bg-accent rounded-lg"></div>
-                <span className="text-xl font-bold text-primary">Shever Technical</span>
+                <span className="text-xl font-bold text-white">Shever Technical</span>
               </div>
             )}
           </Link>
