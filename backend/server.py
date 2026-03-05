@@ -621,11 +621,11 @@ async def get_admin_stats(current_admin: str = Depends(get_current_admin)):
         "gallery_images": gallery_count
     }
 
+# Mount uploads directory for serving static files on API path
+app.mount("/api/uploads", StaticFiles(directory=str(UPLOAD_DIR)), name="uploads")
+
 # Include the router in the main app
 app.include_router(api_router)
-
-# Mount uploads directory for serving static files
-app.mount("/uploads", StaticFiles(directory=str(UPLOAD_DIR)), name="uploads")
 
 app.add_middleware(
     CORSMiddleware,
